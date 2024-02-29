@@ -45,3 +45,18 @@ func (a *cRotation) Update(ctx context.Context, req *backend.RotationUpdateReq) 
 	})
 	return &backend.RotationUpdateRes{req}, err
 }
+
+// GetList 获取列表
+func (a *cRotation) GetList(ctx context.Context, req *backend.RotationGetListReq) (res *backend.RotationGetListRes, err error) {
+	list, err := service.Rotation().GetList(ctx, model.RotationGetListInput{
+		Page: req.Page,
+		Size: req.Size,
+		Sort: req.Sort,
+	})
+	//fmt.Printf("list: %+v\n", list)
+	if err != nil {
+		return nil, err
+	}
+	// 返回结果
+	return &backend.RotationGetListRes{List: list.List, Page: list.Page, Size: list.Size, Total: list.Total}, nil
+}

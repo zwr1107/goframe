@@ -62,3 +62,50 @@ Stack:
 2024-02-29 16:25:32.846 [DEBU] {c4b97fe6ea47b817c8acd05291d98666} [  7 ms] [default] [goframe] [rows:7  ] [txid:1] SHOW FULL COLUMNS FROM `rotation_info`
 2024-02-29 16:25:32.858 [DEBU] {c4b97fe6ea47b817c8acd05291d98666} [ 12 ms] [default] [goframe] [rows:1  ] [txid:1] UPDATE `rotation_info` SET `pic_url`='2',`link`='2',`sort`=0,`updated_at`='2024-02-29 16:25:32' WHERE (`id`=1) AND `deleted_at` IS NULL
 2024-02-29 16:25:32.871 [DEBU] {c4b97fe6ea47b817c8acd05291d98666} [ 13 ms] [default] [goframe] [rows:0  ] [txid:1] COMMIT
+2024-02-29 22:09:51.283 [DEBU] {f87ad0cdb45ab817759c620e1bb65404} [ 99 ms] [default] [goframe] [rows:23 ] SHOW TABLES
+2024-02-29 22:09:51.319 [DEBU] {f87ad0cdb45ab817759c620e1bb65404} [ 12 ms] [default] [goframe] [rows:7  ] SHOW FULL COLUMNS FROM `rotation_info`
+2024-02-29 22:09:51.331 [DEBU] {f87ad0cdb45ab817759c620e1bb65404} [ 11 ms] [default] [goframe] [rows:2  ] SELECT `id`,`pic_url`,`link`,`sort`,`created_at`,`updated_at`,`deleted_at` FROM `rotation_info` WHERE `deleted_at` IS NULL ORDER BY `sort` DESC
+2024-02-29 22:09:51.361 [DEBU] {f87ad0cdb45ab817759c620e1bb65404} [ 30 ms] [default] [goframe] [rows:1  ] SELECT COUNT(1) FROM `rotation_info` WHERE `deleted_at` IS NULL
+2024-02-29 22:18:32.795 [DEBU] {98aecb342e5bb817b053ab247c2488de} [192 ms] [default] [goframe] [rows:23 ] SHOW TABLES
+2024-02-29 22:18:32.808 [DEBU] {98aecb342e5bb817b053ab247c2488de} [ 12 ms] [default] [goframe] [rows:7  ] SHOW FULL COLUMNS FROM `rotation_info`
+2024-02-29 22:18:32.821 [DEBU] {98aecb342e5bb817b053ab247c2488de} [ 11 ms] [default] [goframe] [rows:2  ] SELECT `id`,`pic_url`,`link`,`sort`,`created_at`,`updated_at`,`deleted_at` FROM `rotation_info` WHERE `deleted_at` IS NULL ORDER BY `sort` DESC
+2024-02-29 22:18:32.845 [DEBU] {98aecb342e5bb817b053ab247c2488de} [ 23 ms] [default] [goframe] [rows:1  ] SELECT COUNT(1) FROM `rotation_info` WHERE `deleted_at` IS NULL
+2024-02-29 22:18:32.857 [DEBU] {98aecb342e5bb817b053ab247c2488de} [ 11 ms] [default] [goframe] [rows:2  ] SELECT `id`,`pic_url`,`link`,`sort`,`created_at`,`updated_at` FROM `rotation_info` WHERE `deleted_at` IS NULL ORDER BY `sort` DESC
+2024-02-29 22:22:00.481 [DEBU] {5065e4955e5bb8173d26f21c4686f21e} [ 91 ms] [default] [goframe] [rows:7  ] SHOW FULL COLUMNS FROM `rotation_info`
+2024-02-29 22:22:00.494 [DEBU] {5065e4955e5bb8173d26f21c4686f21e} [ 11 ms] [default] [goframe] [rows:1  ] SELECT COUNT(1) FROM `rotation_info` WHERE `deleted_at` IS NULL
+2024-02-29 22:22:00.505 [DEBU] {5065e4955e5bb8173d26f21c4686f21e} [ 10 ms] [default] [goframe] [rows:23 ] SHOW TABLES
+2024-02-29 22:22:00.515 [DEBU] {5065e4955e5bb8173d26f21c4686f21e} [ 10 ms] [default] [goframe] [rows:2  ] SELECT `id`,`pic_url`,`link`,`sort`,`created_at`,`updated_at` FROM `rotation_info` WHERE `deleted_at` IS NULL
+2024-02-29 22:22:04.206 [DEBU] {007861785f5bb8173e26f21cb77620ac} [ 19 ms] [default] [goframe] [rows:1  ] SELECT COUNT(1) FROM `rotation_info` WHERE `deleted_at` IS NULL
+2024-02-29 22:22:04.218 [DEBU] {007861785f5bb8173e26f21cb77620ac} [ 11 ms] [default] [goframe] [rows:2  ] SELECT `id`,`pic_url`,`link`,`sort`,`created_at`,`updated_at` FROM `rotation_info` WHERE `deleted_at` IS NULL
+2024-02-29 22:23:32.848 [DEBU] {84055919745bb8173f26f21c079a54f7} [ 62 ms] [default] [goframe] [rows:1  ] SELECT COUNT(1) FROM `rotation_info` WHERE `deleted_at` IS NULL
+2024-02-29 22:23:32.857 [DEBU] {84055919745bb8173f26f21c079a54f7} [  7 ms] [default] [goframe] [rows:2  ] SELECT `id`,`pic_url`,`link`,`sort`,`created_at`,`updated_at` FROM `rotation_info` WHERE `deleted_at` IS NULL
+2024-02-29 22:24:42.664 [DEBU] {0c5ac358845bb817f13b2017b981bb90} [ 91 ms] [default] [goframe] [rows:7  ] SHOW FULL COLUMNS FROM `rotation_info`
+2024-02-29 22:24:42.683 [DEBU] {0c5ac358845bb817f13b2017b981bb90} [ 18 ms] [default] [goframe] [rows:1  ] SELECT COUNT(1) FROM `rotation_info` WHERE `deleted_at` IS NULL
+2024-02-29 22:24:42.696 [DEBU] {0c5ac358845bb817f13b2017b981bb90} [ 11 ms] [default] [goframe] [rows:23 ] SHOW TABLES
+2024-02-29 22:24:42.710 [DEBU] {0c5ac358845bb817f13b2017b981bb90} [ 13 ms] [default] [goframe] [rows:2  ] SELECT `id`,`pic_url`,`link`,`sort`,`created_at`,`updated_at` FROM `rotation_info` WHERE `deleted_at` IS NULL
+2024-02-29 22:27:02.390 [DEBU] {d474b4dca45bb817779ee13d1850556b} [164 ms] [default] [goframe] [rows:7  ] SHOW FULL COLUMNS FROM `rotation_info`
+2024-02-29 22:27:02.408 [DEBU] {d474b4dca45bb817779ee13d1850556b} [ 17 ms] [default] [goframe] [rows:1  ] SELECT COUNT(1) FROM `rotation_info` WHERE `deleted_at` IS NULL
+2024-02-29 22:27:02.420 [DEBU] {d474b4dca45bb817779ee13d1850556b} [ 11 ms] [default] [goframe] [rows:23 ] SHOW TABLES
+2024-02-29 22:27:02.433 [DEBU] {d474b4dca45bb817779ee13d1850556b} [ 12 ms] [default] [goframe] [rows:2  ] SELECT `id`,`pic_url`,`link`,`sort`,`created_at`,`updated_at` FROM `rotation_info` WHERE `deleted_at` IS NULL LIMIT 0,10
+2024-02-29 22:27:05.260 [DEBU] {bcce518ea55bb817789ee13dd19f1727} [ 57 ms] [default] [goframe] [rows:1  ] SELECT COUNT(1) FROM `rotation_info` WHERE `deleted_at` IS NULL
+2024-02-29 22:27:05.273 [DEBU] {bcce518ea55bb817789ee13dd19f1727} [ 12 ms] [default] [goframe] [rows:2  ] SELECT `id`,`pic_url`,`link`,`sort`,`created_at`,`updated_at` FROM `rotation_info` WHERE `deleted_at` IS NULL LIMIT 0,10
+2024-02-29 22:30:51.359 [DEBU] {34a28331da5bb8171baa0d76f4e18632} [ 76 ms] [default] [goframe] [rows:7  ] SHOW FULL COLUMNS FROM `rotation_info`
+2024-02-29 22:30:51.387 [DEBU] {34a28331da5bb8171baa0d76f4e18632} [ 27 ms] [default] [goframe] [rows:1  ] SELECT COUNT(1) FROM `rotation_info` WHERE `deleted_at` IS NULL
+2024-02-29 22:30:51.398 [DEBU] {34a28331da5bb8171baa0d76f4e18632} [ 10 ms] [default] [goframe] [rows:23 ] SHOW TABLES
+2024-02-29 22:30:51.409 [DEBU] {34a28331da5bb8171baa0d76f4e18632} [  9 ms] [default] [goframe] [rows:2  ] SELECT `id`,`pic_url`,`link`,`sort`,`created_at`,`updated_at` FROM `rotation_info` WHERE `deleted_at` IS NULL LIMIT 0,10
+2024-02-29 22:37:08.675 [DEBU] {7cbbe90c325cb8171caa0d76ad52886a} [ 53 ms] [default] [goframe] [rows:1  ] SELECT COUNT(1) FROM `rotation_info` WHERE `deleted_at` IS NULL
+2024-02-29 22:37:08.685 [DEBU] {7cbbe90c325cb8171caa0d76ad52886a} [  8 ms] [default] [goframe] [rows:0  ] SELECT `id`,`pic_url`,`link`,`sort`,`created_at`,`updated_at` FROM `rotation_info` WHERE `deleted_at` IS NULL LIMIT 2,2
+2024-02-29 22:37:12.575 [DEBU] {44a2f4f7325cb8171daa0d76a9e5a895} [  9 ms] [default] [goframe] [rows:1  ] SELECT COUNT(1) FROM `rotation_info` WHERE `deleted_at` IS NULL
+2024-02-29 22:37:12.584 [DEBU] {44a2f4f7325cb8171daa0d76a9e5a895} [  8 ms] [default] [goframe] [rows:1  ] SELECT `id`,`pic_url`,`link`,`sort`,`created_at`,`updated_at` FROM `rotation_info` WHERE `deleted_at` IS NULL LIMIT 1,1
+2024-02-29 22:39:53.353 [DEBU] {c8dc5a62585cb817d26445563f72bbc0} [ 87 ms] [default] [goframe] [rows:7  ] SHOW FULL COLUMNS FROM `rotation_info`
+2024-02-29 22:39:53.372 [DEBU] {c8dc5a62585cb817d26445563f72bbc0} [ 18 ms] [default] [goframe] [rows:1  ] SELECT COUNT(1) FROM `rotation_info` WHERE `deleted_at` IS NULL
+2024-02-29 22:39:53.386 [DEBU] {c8dc5a62585cb817d26445563f72bbc0} [ 13 ms] [default] [goframe] [rows:23 ] SHOW TABLES
+2024-02-29 22:39:53.399 [DEBU] {c8dc5a62585cb817d26445563f72bbc0} [ 12 ms] [default] [goframe] [rows:1  ] SELECT `id`,`pic_url`,`link`,`sort`,`created_at`,`updated_at` FROM `rotation_info` WHERE `deleted_at` IS NULL LIMIT 1,1
+2024-02-29 22:40:59.584 [DEBU] {945981cf675cb817af784547f7804931} [ 60 ms] [default] [goframe] [rows:7  ] SHOW FULL COLUMNS FROM `rotation_info`
+2024-02-29 22:40:59.595 [DEBU] {945981cf675cb817af784547f7804931} [ 10 ms] [default] [goframe] [rows:1  ] SELECT COUNT(1) FROM `rotation_info` WHERE `deleted_at` IS NULL
+2024-02-29 22:40:59.604 [DEBU] {945981cf675cb817af784547f7804931} [  8 ms] [default] [goframe] [rows:23 ] SHOW TABLES
+2024-02-29 22:40:59.613 [DEBU] {945981cf675cb817af784547f7804931} [  8 ms] [default] [goframe] [rows:1  ] SELECT `id`,`pic_url`,`link`,`sort`,`created_at`,`updated_at` FROM `rotation_info` WHERE `deleted_at` IS NULL LIMIT 1,1
+2024-02-29 22:42:05.099 [DEBU] {60ff070e775cb81793753109781439df} [103 ms] [default] [goframe] [rows:7  ] SHOW FULL COLUMNS FROM `rotation_info`
+2024-02-29 22:42:05.118 [DEBU] {60ff070e775cb81793753109781439df} [ 17 ms] [default] [goframe] [rows:1  ] SELECT COUNT(1) FROM `rotation_info` WHERE `deleted_at` IS NULL
+2024-02-29 22:42:05.146 [DEBU] {60ff070e775cb81793753109781439df} [ 27 ms] [default] [goframe] [rows:23 ] SHOW TABLES
+2024-02-29 22:42:05.171 [DEBU] {60ff070e775cb81793753109781439df} [ 25 ms] [default] [goframe] [rows:1  ] SELECT `id`,`pic_url`,`link`,`sort`,`created_at`,`updated_at` FROM `rotation_info` WHERE `deleted_at` IS NULL LIMIT 1,1

@@ -34,7 +34,7 @@ type RotationDeleteRes struct {
 
 }
 
-// 更新
+// RotationUpdateReq 更新
 type RotationUpdateReq struct {
 	g.Meta `path:"/backend/rotation/update" method:"post" tags:"Rotation" summary:"更新轮播图"`
 	Id     uint   `json:"id" v:"min:1#请选择需要修改的轮播图" dc:"轮播图id"`
@@ -46,12 +46,20 @@ type RotationUpdateReq struct {
 // RotationUpdateRes 更新返回
 type RotationUpdateRes struct {
 	//返回成功
-	*RotationUpdateReq
+	*RotationUpdateReq //返回修改后的数据
 }
 
 // RotationGetListReq  RotationGetListReq 获取轮播图列表请求参数
 type RotationGetListReq struct {
-	g.Meta `path:"/backend/rotation/list" method:"get" tags:"Rotation" summary:"获取轮播图列表"`
-	Page   int `json:"page" v:"min:1#页码必须大于0" dc:"页码"`
-	Size   int `json:"size" v:"min:1#每页数量必须大于0" dc:"每页数量"`
+	g.Meta              `path:"/backend/rotation/list" method:"get" tags:"Rotation" summary:"获取轮播图列表"`
+	Sort                int `json:"sort" in:"query" dc:"排序类型"`
+	CommonPaginationReq     //分页参数
+}
+
+// RotationGetListRes  列表返回
+type RotationGetListRes struct {
+	List  interface{} `json:"list" description:"列表"`
+	Page  int         `json:"page" description:"分页码"`
+	Size  int         `json:"size" description:"分页数量"`
+	Total int         `json:"total" description:"数据总数"`
 }
