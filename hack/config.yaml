@@ -1,0 +1,17 @@
+
+# CLI tool, only in development environment.
+# https://goframe.org/pages/viewpage.action?pageId=3673173
+gfcli:
+  #工具编译配置
+  build:
+    name: goframe
+    arch: amd64
+    system: "linux, windows, darwin"
+    mod: ""
+    cgo: 0
+  # dao生成
+  gen:
+    dao: #todo 换成你自己的密码
+      - link: "mysql:goframe:goframe@tcp(42.194.215.178:3306)/goframe"
+        descriptionTag: true
+        noModelComment: true

@@ -1,0 +1,2 @@
+2024-02-29 09:50:40.774 [DEBU] {741cb1a85e32b817e04d9a5ea231694d} [ 47 ms] [default] [goframe] [rows:7  ] SHOW FULL COLUMNS FROM `rotation_info`
+2024-02-29 09:50:40.795 [DEBU] {741cb1a85e32b817e04d9a5ea231694d} [ 20 ms] [default] [goframe] [rows:1  ] INSERT INTO `rotation_info`(`pic_url`,`link`,`sort`,`created_at`,`updated_at`) VALUES('1','1',1,'2024-02-29 09:50:40','2024-02-29 09:50:40') 
