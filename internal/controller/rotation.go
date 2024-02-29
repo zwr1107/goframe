@@ -12,6 +12,7 @@ var Rotation = cRotation{}
 
 type cRotation struct{}
 
+// Create 创建
 func (a *cRotation) Create(ctx context.Context, req *backend.RotationCreateReq) (res *backend.RotationCreateRes, err error) {
 	out, err := service.Rotation().Create(ctx, model.RotationCreateInput{
 		RotationCreateUpdateBase: model.RotationCreateUpdateBase{
@@ -24,4 +25,23 @@ func (a *cRotation) Create(ctx context.Context, req *backend.RotationCreateReq) 
 		return nil, err
 	}
 	return &backend.RotationCreateRes{RotationId: out.RotationId}, nil
+}
+
+// Delete 删除
+func (a *cRotation) Delete(ctx context.Context, req *backend.RotationDeleteReq) (res *backend.RotationDeleteRes, err error) {
+	err = service.Rotation().Delete(ctx, req.Id)
+	return &backend.RotationDeleteRes{}, err
+}
+
+// Update 更新
+func (a *cRotation) Update(ctx context.Context, req *backend.RotationUpdateReq) (res *backend.RotationUpdateRes, err error) {
+	err = service.Rotation().Update(ctx, model.RotationUpdateInput{
+		RotationCreateUpdateBase: model.RotationCreateUpdateBase{
+			PicUrl: req.PicUrl,
+			Link:   req.Link,
+			Sort:   req.Sort,
+		},
+		Id: req.Id,
+	})
+	return &backend.RotationUpdateRes{req}, err
 }

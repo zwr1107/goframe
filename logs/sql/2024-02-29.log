@@ -1,2 +1,64 @@
 2024-02-29 09:50:40.774 [DEBU] {741cb1a85e32b817e04d9a5ea231694d} [ 47 ms] [default] [goframe] [rows:7  ] SHOW FULL COLUMNS FROM `rotation_info`
 2024-02-29 09:50:40.795 [DEBU] {741cb1a85e32b817e04d9a5ea231694d} [ 20 ms] [default] [goframe] [rows:1  ] INSERT INTO `rotation_info`(`pic_url`,`link`,`sort`,`created_at`,`updated_at`) VALUES('1','1',1,'2024-02-29 09:50:40','2024-02-29 09:50:40') 
+2024-02-29 10:51:50.856 [DEBU] {cc62a92bb535b817b39ae815da93dfe5} [ 30 ms] [default] [goframe] [rows:7  ] SHOW FULL COLUMNS FROM `rotation_info`
+2024-02-29 10:51:50.863 [ERRO] {cc62a92bb535b817b39ae815da93dfe5} [  5 ms] [default] [goframe] [rows:0  ] UPDATE `rotation_info` SET `deleted_at`='2024-02-29 10:51:50' WHERE (`rotation_id`=9) AND `deleted_at` IS NULL
+Error: Error 1054 (42S22): Unknown column 'rotation_id' in 'where clause' 
+Stack:
+1.  goframe/internal/logic/rotation.(*sRotation).Delete
+    D:/Users/zhushuanhao_gz/go/src/goframe/goframe/internal/logic/rotation/rotation.go:38
+2.  goframe/internal/controller.(*cRotation).Delete
+    D:/Users/zhushuanhao_gz/go/src/goframe/goframe/internal/controller/rotation.go:31
+
+2024-02-29 11:25:55.265 [DEBU] {b476352a9137b817cd32f555c4ed9b2a} [ 58 ms] [default] [goframe] [rows:0  ] [txid:1] BEGIN
+2024-02-29 11:25:55.278 [DEBU] {b476352a9137b817cd32f555c4ed9b2a} [ 11 ms] [default] [goframe] [rows:7  ] [txid:1] SHOW FULL COLUMNS FROM `rotation_info`
+2024-02-29 11:25:55.303 [DEBU] {b476352a9137b817cd32f555c4ed9b2a} [ 24 ms] [default] [goframe] [rows:1  ] [txid:1] UPDATE `rotation_info` SET `deleted_at`='2024-02-29 11:25:55' WHERE (`id`=9) AND `deleted_at` IS NULL
+2024-02-29 11:25:55.323 [DEBU] {b476352a9137b817cd32f555c4ed9b2a} [ 19 ms] [default] [goframe] [rows:0  ] [txid:1] COMMIT
+2024-02-29 11:35:20.978 [DEBU] {acece9e21438b8176a375301c762364d} [ 33 ms] [default] [goframe] [rows:0  ] [txid:1] BEGIN
+2024-02-29 11:35:20.997 [DEBU] {acece9e21438b8176a375301c762364d} [ 18 ms] [default] [goframe] [rows:7  ] [txid:1] SHOW FULL COLUMNS FROM `rotation_info`
+2024-02-29 11:35:21.013 [DEBU] {acece9e21438b8176a375301c762364d} [ 14 ms] [default] [goframe] [rows:1  ] [txid:1] DELETE FROM `rotation_info` WHERE `id`=9
+2024-02-29 11:35:21.025 [DEBU] {acece9e21438b8176a375301c762364d} [ 12 ms] [default] [goframe] [rows:0  ] [txid:1] COMMIT
+2024-02-29 11:35:34.398 [DEBU] {b8a988041838b8176b37530131384c36} [  5 ms] [default] [goframe] [rows:0  ] [txid:2] BEGIN
+2024-02-29 11:35:34.410 [DEBU] {b8a988041838b8176b37530131384c36} [ 11 ms] [default] [goframe] [rows:0  ] [txid:2] DELETE FROM `rotation_info` WHERE `id`=9
+2024-02-29 11:35:34.419 [DEBU] {b8a988041838b8176b37530131384c36} [  9 ms] [default] [goframe] [rows:0  ] [txid:2] COMMIT
+2024-02-29 14:46:10.652 [DEBU] {541278b87e42b817076ef55cd0786096} [ 32 ms] [default] [goframe] [rows:0  ] [txid:1] BEGIN
+2024-02-29 14:46:10.682 [DEBU] {541278b87e42b817076ef55cd0786096} [  7 ms] [default] [goframe] [rows:23 ] [txid:1] SHOW TABLES
+2024-02-29 14:46:10.725 [DEBU] {541278b87e42b817076ef55cd0786096} [ 43 ms] [default] [goframe] [rows:7  ] [txid:1] SHOW FULL COLUMNS FROM `rotation_info`
+2024-02-29 14:46:10.750 [DEBU] {541278b87e42b817076ef55cd0786096} [ 15 ms] [default] [goframe] [rows:0  ] [txid:1] UPDATE `rotation_info` SET `pic_url`='2',`link`='2',`sort`=2,`updated_at`='2024-02-29 14:46:10' WHERE (`id`=0) AND `deleted_at` IS NULL
+2024-02-29 14:46:10.763 [DEBU] {541278b87e42b817076ef55cd0786096} [ 13 ms] [default] [goframe] [rows:0  ] [txid:1] COMMIT
+2024-02-29 14:47:04.287 [DEBU] {6cce06358b42b817086ef55c74cdd238} [ 42 ms] [default] [goframe] [rows:0  ] [txid:2] BEGIN
+2024-02-29 14:47:04.304 [DEBU] {6cce06358b42b817086ef55c74cdd238} [ 16 ms] [default] [goframe] [rows:0  ] [txid:2] UPDATE `rotation_info` SET `pic_url`='2',`link`='2',`sort`=2,`updated_at`='2024-02-29 14:47:04' WHERE (`id`=0) AND `deleted_at` IS NULL
+2024-02-29 14:47:04.319 [DEBU] {6cce06358b42b817086ef55c74cdd238} [ 14 ms] [default] [goframe] [rows:0  ] [txid:2] COMMIT
+2024-02-29 14:49:09.107 [DEBU] {e8972b44a842b817096ef55c32ac1c61} [ 55 ms] [default] [goframe] [rows:0  ] [txid:3] BEGIN
+2024-02-29 14:49:09.153 [DEBU] {e8972b44a842b817096ef55c32ac1c61} [ 22 ms] [default] [goframe] [rows:0  ] [txid:3] UPDATE `rotation_info` SET `pic_url`='2',`link`='2',`sort`=2,`updated_at`='2024-02-29 14:49:09' WHERE (`id`=0) AND `deleted_at` IS NULL
+2024-02-29 14:49:09.175 [DEBU] {e8972b44a842b817096ef55c32ac1c61} [ 12 ms] [default] [goframe] [rows:0  ] [txid:3] COMMIT
+2024-02-29 14:49:25.215 [DEBU] {7028d104ac42b8179af0cf1f3d5c1c58} [ 44 ms] [default] [goframe] [rows:0  ] [txid:1] BEGIN
+2024-02-29 14:49:25.224 [DEBU] {7028d104ac42b8179af0cf1f3d5c1c58} [  8 ms] [default] [goframe] [rows:23 ] [txid:1] SHOW TABLES
+2024-02-29 14:49:25.240 [DEBU] {7028d104ac42b8179af0cf1f3d5c1c58} [ 14 ms] [default] [goframe] [rows:7  ] [txid:1] SHOW FULL COLUMNS FROM `rotation_info`
+2024-02-29 14:49:25.254 [DEBU] {7028d104ac42b8179af0cf1f3d5c1c58} [ 14 ms] [default] [goframe] [rows:1  ] [txid:1] UPDATE `rotation_info` SET `pic_url`='2',`link`='2',`sort`=2,`updated_at`='2024-02-29 14:49:25' WHERE (`id`=8) AND `deleted_at` IS NULL
+2024-02-29 14:49:25.268 [DEBU] {7028d104ac42b8179af0cf1f3d5c1c58} [ 14 ms] [default] [goframe] [rows:0  ] [txid:1] COMMIT
+2024-02-29 16:21:05.307 [DEBU] {9c4b20b8aa47b8179bf0cf1f591590fb} [885 ms] [default] [goframe] [rows:0  ] [txid:2] BEGIN
+2024-02-29 16:21:07.227 [DEBU] {9c4b20b8aa47b8179bf0cf1f591590fb} [283 ms] [default] [goframe] [rows:1  ] [txid:2] UPDATE `rotation_info` SET `pic_url`='2',`link`='2',`sort`=2,`updated_at`='2024-02-29 16:21:06' WHERE (`id`=8) AND `deleted_at` IS NULL
+2024-02-29 16:21:07.240 [DEBU] {9c4b20b8aa47b8179bf0cf1f591590fb} [ 13 ms] [default] [goframe] [rows:0  ] [txid:2] COMMIT
+2024-02-29 16:22:56.320 [DEBU] {c0f6d774c647b817f07d223af81147fc} [ 42 ms] [default] [goframe] [rows:0  ] [txid:1] BEGIN
+2024-02-29 16:22:56.331 [DEBU] {c0f6d774c647b817f07d223af81147fc} [ 10 ms] [default] [goframe] [rows:23 ] [txid:1] SHOW TABLES
+2024-02-29 16:22:56.341 [DEBU] {c0f6d774c647b817f07d223af81147fc} [ 10 ms] [default] [goframe] [rows:7  ] [txid:1] SHOW FULL COLUMNS FROM `rotation_info`
+2024-02-29 16:22:56.360 [DEBU] {c0f6d774c647b817f07d223af81147fc} [ 18 ms] [default] [goframe] [rows:1  ] [txid:1] UPDATE `rotation_info` SET `pic_url`='2',`link`='2',`sort`=0,`updated_at`='2024-02-29 16:22:56' WHERE (`id`=8) AND `deleted_at` IS NULL
+2024-02-29 16:22:56.376 [DEBU] {c0f6d774c647b817f07d223af81147fc} [ 16 ms] [default] [goframe] [rows:0  ] [txid:1] COMMIT
+2024-02-29 16:24:10.912 [DEBU] {2c4355d3d747b817841e1a73477c0d9d} [ 34 ms] [default] [goframe] [rows:0  ] [txid:1] BEGIN
+2024-02-29 16:24:10.920 [DEBU] {2c4355d3d747b817841e1a73477c0d9d} [  7 ms] [default] [goframe] [rows:23 ] [txid:1] SHOW TABLES
+2024-02-29 16:24:10.928 [DEBU] {2c4355d3d747b817841e1a73477c0d9d} [  8 ms] [default] [goframe] [rows:7  ] [txid:1] SHOW FULL COLUMNS FROM `rotation_info`
+2024-02-29 16:24:10.943 [DEBU] {2c4355d3d747b817841e1a73477c0d9d} [ 14 ms] [default] [goframe] [rows:1  ] [txid:1] UPDATE `rotation_info` SET `pic_url`='2',`link`='2',`sort`=0,`updated_at`='2024-02-29 16:24:10' WHERE (`id`=8) AND `deleted_at` IS NULL
+2024-02-29 16:24:10.954 [DEBU] {2c4355d3d747b817841e1a73477c0d9d} [ 11 ms] [default] [goframe] [rows:0  ] [txid:1] COMMIT
+2024-02-29 16:24:27.183 [DEBU] {30e7e29edb47b817851e1a735d9bee87} [  7 ms] [default] [goframe] [rows:0  ] [txid:2] BEGIN
+2024-02-29 16:24:27.196 [DEBU] {30e7e29edb47b817851e1a735d9bee87} [ 13 ms] [default] [goframe] [rows:1  ] [txid:2] UPDATE `rotation_info` SET `pic_url`='2',`link`='2',`sort`=0,`updated_at`='2024-02-29 16:24:27' WHERE (`id`=1) AND `deleted_at` IS NULL
+2024-02-29 16:24:27.208 [DEBU] {30e7e29edb47b817851e1a735d9bee87} [ 12 ms] [default] [goframe] [rows:0  ] [txid:2] COMMIT
+2024-02-29 16:25:07.838 [DEBU] {1ce5e714e547b817c008b11d3217db51} [ 25 ms] [default] [goframe] [rows:0  ] [txid:1] BEGIN
+2024-02-29 16:25:07.845 [DEBU] {1ce5e714e547b817c008b11d3217db51} [  5 ms] [default] [goframe] [rows:23 ] [txid:1] SHOW TABLES
+2024-02-29 16:25:07.851 [DEBU] {1ce5e714e547b817c008b11d3217db51} [  5 ms] [default] [goframe] [rows:7  ] [txid:1] SHOW FULL COLUMNS FROM `rotation_info`
+2024-02-29 16:25:07.863 [DEBU] {1ce5e714e547b817c008b11d3217db51} [ 11 ms] [default] [goframe] [rows:1  ] [txid:1] UPDATE `rotation_info` SET `pic_url`='2',`link`='2',`sort`=0,`updated_at`='2024-02-29 16:25:07' WHERE (`id`=1) AND `deleted_at` IS NULL
+2024-02-29 16:25:07.879 [DEBU] {1ce5e714e547b817c008b11d3217db51} [ 16 ms] [default] [goframe] [rows:0  ] [txid:1] COMMIT
+2024-02-29 16:25:32.829 [DEBU] {c4b97fe6ea47b817c8acd05291d98666} [ 26 ms] [default] [goframe] [rows:0  ] [txid:1] BEGIN
+2024-02-29 16:25:32.838 [DEBU] {c4b97fe6ea47b817c8acd05291d98666} [  8 ms] [default] [goframe] [rows:23 ] [txid:1] SHOW TABLES
+2024-02-29 16:25:32.846 [DEBU] {c4b97fe6ea47b817c8acd05291d98666} [  7 ms] [default] [goframe] [rows:7  ] [txid:1] SHOW FULL COLUMNS FROM `rotation_info`
+2024-02-29 16:25:32.858 [DEBU] {c4b97fe6ea47b817c8acd05291d98666} [ 12 ms] [default] [goframe] [rows:1  ] [txid:1] UPDATE `rotation_info` SET `pic_url`='2',`link`='2',`sort`=0,`updated_at`='2024-02-29 16:25:32' WHERE (`id`=1) AND `deleted_at` IS NULL
+2024-02-29 16:25:32.871 [DEBU] {c4b97fe6ea47b817c8acd05291d98666} [ 13 ms] [default] [goframe] [rows:0  ] [txid:1] COMMIT
