@@ -5,6 +5,8 @@ import (
 	"goframe/api/backend"
 	"goframe/internal/model"
 	"goframe/internal/service"
+
+	"github.com/gogf/gf/v2/util/gconv"
 )
 
 // Admin 内容管理
@@ -61,4 +63,12 @@ func (a *cAdmin) GetList(ctx context.Context, req *backend.AdminGetListReq) (res
 	}
 	// 返回结果
 	return &backend.AdminGetListRes{List: list.List, Page: list.Page, Size: list.Size, Total: list.Total}, nil
+}
+
+func (c *cAdmin) Info(ctx context.Context, req *backend.AdminGetInfoReq) (res *backend.AdminGetInfoRes, err error) {
+	return &backend.AdminGetInfoRes{
+		Id:          gconv.Int(service.Auth().GetIdentity(ctx)),
+		IdentityKey: service.Auth().IdentityKey,
+		Payload:     service.Auth().GetPayload(ctx),
+	}, nil
 }

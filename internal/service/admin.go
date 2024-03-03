@@ -20,6 +20,7 @@ type (
 		Update(ctx context.Context, in model.AdminUpdateInput) error
 		// GetList 获取列表
 		GetList(ctx context.Context, in model.AdminGetListInput) (out *model.AdminGetListOutput, err error)
+		GetUserByUserNamePassword(ctx context.Context, in model.UserLoginInput) map[string]interface{}
 	}
 )
 

@@ -4,8 +4,13 @@ import (
 	"context"
 	"goframe/internal/dao"
 	"goframe/internal/model"
+	"goframe/internal/model/entity"
 	"goframe/internal/service"
 	"goframe/utility"
+
+	"github.com/gogf/gf/v2/frame/g"
+
+	"github.com/go-errors/errors"
 
 	"github.com/gogf/gf/v2/database/gdb"
 	"github.com/gogf/gf/v2/encoding/ghtml"
@@ -28,9 +33,12 @@ func (s *sAdmin) Create(ctx context.Context, in model.AdminCreateInput) (out mod
 	if err = ghtml.SpecialCharsMapOrStruct(in); err != nil {
 		return out, err
 	}
-	//判断用户名是否存在
-	adminInfo := model.AdminCreateUpdateBase{}
+	////判断用户名是否存在
+	adminInfo := entity.AdminInfo{}
 	err = dao.AdminInfo.Ctx(ctx).Where(dao.AdminInfo.Columns().Name, in.Name).Scan(&adminInfo)
+	if err == nil {
+		return out, errors.New("用户名已存在")
+	}
 
 	//密码加盐,随机生成一个盐值
 	Salt := grand.S(10)
@@ -112,4 +120,21 @@ func (s *sAdmin) GetList(ctx context.Context, in model.AdminGetListInput) (out *
 	}
 	return
 
+}
+
+func (s *sAdmin) GetUserByUserNamePassword(ctx context.Context, in model.UserLoginInput) map[string]interface{} {
+	//验证账号密码是否正确
+	adminInfo := entity.AdminInfo{}
+	err := dao.AdminInfo.Ctx(ctx).Where("name", in.Name).Scan(&adminInfo)
+	if err != nil {
+		return nil
+	}
+	if utility.EncryptPassword(in.Password, adminInfo.UserSalt) != adminInfo.Password {
+		return nil
+	} else {
+		return g.Map{
+			"id":       adminInfo.Id,
+			"username": adminInfo.Name,
+		}
+	}
 }

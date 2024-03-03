@@ -42,3 +42,8 @@ Stack:
 2024-03-01 17:20:20.229 [DEBU] {40a02ae17c99b8174bf6255674c491db} [ 10 ms] [default] [goframe] [rows:0  ] [txid:2] BEGIN
 2024-03-01 17:20:20.246 [DEBU] {40a02ae17c99b8174bf6255674c491db} [ 17 ms] [default] [goframe] [rows:1  ] [txid:2] DELETE FROM `admin_info` WHERE `id`=16
 2024-03-01 17:20:20.260 [DEBU] {40a02ae17c99b8174bf6255674c491db} [ 14 ms] [default] [goframe] [rows:0  ] [txid:2] COMMIT
+2024-03-01 23:53:43.214 [DEBU] {ece335a6f2aeb817fd2680053e16798a} [7431 ms] [default] [goframe] [rows:23 ] SHOW TABLES
+2024-03-01 23:53:43.235 [DEBU] {ece335a6f2aeb817fd2680053e16798a} [ 20 ms] [default] [goframe] [rows:9  ] SHOW FULL COLUMNS FROM `admin_info`
+2024-03-01 23:53:43.276 [DEBU] {ece335a6f2aeb817fd2680053e16798a} [ 40 ms] [default] [goframe] [rows:0  ] SELECT `name`,`password`,`role_ids`,`is_admin`,`user_salt` FROM `admin_info` WHERE (`name`='1') AND `deleted_at` IS NULL LIMIT 1
+2024-03-01 23:53:43.323 [DEBU] {ece335a6f2aeb817fd2680053e16798a} [ 46 ms] [default] [goframe] [rows:1  ] INSERT INTO `admin_info`(`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin`) VALUES('1','5bbafb3e5284c59385392049638a525f','1','2024-03-01 23:53:43','2024-03-01 23:53:43','cWUvh7YySj',1) 
+2024-03-01 23:53:48.318 [DEBU] {d0d4478ff5aeb817fe26800546069708} [ 36 ms] [default] [goframe] [rows:1  ] SELECT `name`,`password`,`role_ids`,`is_admin`,`user_salt` FROM `admin_info` WHERE (`name`='1') AND `deleted_at` IS NULL LIMIT 1
