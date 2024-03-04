@@ -3,6 +3,7 @@ package controller
 import (
 	"context"
 	"goframe/api/backend"
+	"goframe/internal/consts"
 	"goframe/internal/model"
 	"goframe/internal/service"
 
@@ -67,8 +68,9 @@ func (a *cAdmin) GetList(ctx context.Context, req *backend.AdminGetListReq) (res
 
 func (c *cAdmin) Info(ctx context.Context, req *backend.AdminGetInfoReq) (res *backend.AdminGetInfoRes, err error) {
 	return &backend.AdminGetInfoRes{
-		Id:          gconv.Int(service.Auth().GetIdentity(ctx)),
-		IdentityKey: service.Auth().IdentityKey,
-		Payload:     service.Auth().GetPayload(ctx),
+		Id:      gconv.Int(ctx.Value(consts.CtxAdminId)),
+		Name:    gconv.String(ctx.Value(consts.CtxAdminName)),
+		IsAdmin: gconv.Int(ctx.Value(consts.CtxAdminIsAdmin)),
+		RoleIds: gconv.String(ctx.Value(consts.CtxAdminRoleIds)),
 	}, nil
 }

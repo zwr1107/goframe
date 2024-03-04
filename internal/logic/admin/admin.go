@@ -35,7 +35,8 @@ func (s *sAdmin) Create(ctx context.Context, in model.AdminCreateInput) (out mod
 	}
 	////判断用户名是否存在
 	adminInfo := entity.AdminInfo{}
-	err = dao.AdminInfo.Ctx(ctx).Where(dao.AdminInfo.Columns().Name, in.Name).Scan(&adminInfo)
+	//dao.AdminInfo.Columns().Name, in.Name
+	err = dao.AdminInfo.Ctx(ctx).Where("name", in.Name).Scan(&adminInfo)
 	if err == nil {
 		return out, errors.New("用户名已存在")
 	}
