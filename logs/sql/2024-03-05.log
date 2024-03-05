@@ -1,0 +1,35 @@
+2024-03-05 16:44:40.556 [DEBU] {a8f77ff6dcd1b9170e64ae37f3cbab0a} [ 32 ms] [default] [goframe] [rows:9  ] SHOW FULL COLUMNS FROM `position_info`
+2024-03-05 16:44:40.564 [DEBU] {a8f77ff6dcd1b9170e64ae37f3cbab0a} [  6 ms] [default] [goframe] [rows:1  ] SELECT COUNT(1) FROM `position_info` WHERE `deleted_at` IS NULL
+2024-03-05 16:44:40.572 [DEBU] {a8f77ff6dcd1b9170e64ae37f3cbab0a} [  8 ms] [default] [goframe] [rows:23 ] SHOW TABLES
+2024-03-05 16:44:40.581 [DEBU] {a8f77ff6dcd1b9170e64ae37f3cbab0a} [  9 ms] [default] [goframe] [rows:1  ] SELECT `id`,`pic_url`,`link`,`sort`,`goods_name`,`goods_id`,`created_at`,`updated_at` FROM `position_info` WHERE `deleted_at` IS NULL LIMIT 0,10
+2024-03-05 16:45:07.861 [DEBU] {1ca39d53e3d1b9170f64ae3703ea7502} [  7 ms] [default] [goframe] [rows:7  ] SHOW FULL COLUMNS FROM `rotation_info`
+2024-03-05 16:45:07.868 [DEBU] {1ca39d53e3d1b9170f64ae3703ea7502} [  7 ms] [default] [goframe] [rows:1  ] SELECT COUNT(1) FROM `rotation_info` WHERE `deleted_at` IS NULL
+2024-03-05 16:45:07.875 [DEBU] {1ca39d53e3d1b9170f64ae3703ea7502} [  7 ms] [default] [goframe] [rows:2  ] SELECT `id`,`pic_url`,`link`,`sort`,`created_at`,`updated_at` FROM `rotation_info` WHERE `deleted_at` IS NULL LIMIT 0,10
+2024-03-05 16:53:36.792 [DEBU] {ac03f6cf59d2b9179625a11544cc75db} [ 44 ms] [default] [goframe] [rows:7  ] SHOW FULL COLUMNS FROM `rotation_info`
+2024-03-05 16:53:36.803 [DEBU] {ac03f6cf59d2b9179625a11544cc75db} [  9 ms] [default] [goframe] [rows:1  ] SELECT COUNT(1) FROM `rotation_info` WHERE `deleted_at` IS NULL
+2024-03-05 16:53:36.813 [DEBU] {ac03f6cf59d2b9179625a11544cc75db} [  9 ms] [default] [goframe] [rows:23 ] SHOW TABLES
+2024-03-05 16:53:36.822 [DEBU] {ac03f6cf59d2b9179625a11544cc75db} [  9 ms] [default] [goframe] [rows:2  ] SELECT `id`,`pic_url`,`link`,`sort`,`created_at`,`updated_at` FROM `rotation_info` WHERE `deleted_at` IS NULL LIMIT 0,10
+2024-03-05 17:01:15.449 [DEBU] {f8af3b9ac4d2b917f80e3056b52756f8} [ 43 ms] [default] [goframe] [rows:23 ] SHOW TABLES
+2024-03-05 17:01:15.456 [DEBU] {e803d79cc4d2b917f90e3056be55f2d3} [  6 ms] [default] [goframe] [rows:9  ] SHOW FULL COLUMNS FROM `admin_info`
+2024-03-05 17:01:15.467 [DEBU] {00a7349dc4d2b917fa0e3056f6cabe5b} [ 11 ms] [default] [goframe] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin`,`deleted_at` FROM `admin_info` WHERE (`name`='12') AND `deleted_at` IS NULL LIMIT 1
+2024-03-05 17:01:15.495 [DEBU] {0033e89ec4d2b917fb0e30560d7d2519} [ 10 ms] [default] [goframe] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin`,`deleted_at` FROM `admin_info` WHERE (`id`='19') AND `deleted_at` IS NULL LIMIT 1
+2024-03-05 17:01:15.501 [DEBU] {4c40899fc4d2b917fc0e3056240fbe0e} [  6 ms] [default] [goframe] [rows:5  ] SHOW FULL COLUMNS FROM `role_permission_info`
+2024-03-05 17:01:15.512 [DEBU] {dc33e79fc4d2b917fd0e305623178c03} [ 11 ms] [default] [goframe] [rows:0  ] SELECT `id`,`role_id`,`permission_id`,`created_at`,`updated_at` FROM `role_permission_info` WHERE `role_id` IN ('1')
+2024-03-05 17:01:15.517 [DEBU] {b4a592a0c4d2b917fe0e3056b79547e9} [  4 ms] [default] [goframe] [rows:6  ] SHOW FULL COLUMNS FROM `permission_info`
+2024-03-05 17:01:15.523 [DEBU] {30cae7a0c4d2b917ff0e3056085599a6} [  5 ms] [default] [goframe] [rows:0  ] SELECT `id`,`name`,`path`,`created_at`,`updated_at`,`deleted_at` FROM `permission_info` WHERE (0=1) AND `deleted_at` IS NULL
+2024-03-05 17:10:21.414 [DEBU] {d881d2b843d3b91709d3f549c27cf882} [ 34 ms] [default] [goframe] [rows:23 ] SHOW TABLES
+2024-03-05 17:10:21.422 [DEBU] {1055deba43d3b9170ad3f54910827814} [  7 ms] [default] [goframe] [rows:9  ] SHOW FULL COLUMNS FROM `admin_info`
+2024-03-05 17:10:21.435 [DEBU] {743e4abb43d3b9170bd3f5491f18fade} [ 12 ms] [default] [goframe] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin`,`deleted_at` FROM `admin_info` WHERE (`name`='12') AND `deleted_at` IS NULL LIMIT 1
+2024-03-05 17:10:21.453 [DEBU] {8cd454bc43d3b9170cd3f54940bb33a2} [ 14 ms] [default] [goframe] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin`,`deleted_at` FROM `admin_info` WHERE (`id`='19') AND `deleted_at` IS NULL LIMIT 1
+2024-03-05 17:10:21.461 [DEBU] {d4f729bd43d3b9170dd3f549afbdd091} [  8 ms] [default] [goframe] [rows:5  ] SHOW FULL COLUMNS FROM `role_permission_info`
+2024-03-05 17:10:21.477 [DEBU] {b09fa5bd43d3b9170ed3f549bf7836b8} [ 16 ms] [default] [goframe] [rows:0  ] SELECT `id`,`role_id`,`permission_id`,`created_at`,`updated_at` FROM `role_permission_info` WHERE `role_id` IN ('1')
+2024-03-05 17:10:21.483 [DEBU] {5c6592be43d3b9170fd3f5493a66103c} [  6 ms] [default] [goframe] [rows:6  ] SHOW FULL COLUMNS FROM `permission_info`
+2024-03-05 17:10:21.491 [DEBU] {d48e09bf43d3b91710d3f549f4104c58} [  6 ms] [default] [goframe] [rows:0  ] SELECT `id`,`name`,`path`,`created_at`,`updated_at`,`deleted_at` FROM `permission_info` WHERE (0=1) AND `deleted_at` IS NULL
+2024-03-05 17:10:31.769 [DEBU] {e0228a2346d3b91711d3f549ba97490d} [  7 ms] [default] [goframe] [rows:6  ] SHOW FULL COLUMNS FROM `role_info`
+2024-03-05 17:10:31.775 [DEBU] {e0228a2346d3b91711d3f549ba97490d} [  6 ms] [default] [goframe] [rows:1  ] SELECT COUNT(1) FROM `role_info` WHERE `deleted_at` IS NULL
+2024-03-05 17:10:31.784 [DEBU] {e0228a2346d3b91711d3f549ba97490d} [  9 ms] [default] [goframe] [rows:2  ] SELECT `id`,`name`,`desc`,`created_at`,`updated_at` FROM `role_info` WHERE `deleted_at` IS NULL LIMIT 0,10
+2024-03-05 17:23:45.663 [DEBU] {50083df8fed3b91713d3f549bf827c48} [ 57 ms] [default] [goframe] [rows:1  ] INSERT INTO `role_info`(`name`,`desc`,`created_at`,`updated_at`) VALUES('1','1','2024-03-05 17:23:45','2024-03-05 17:23:45') 
+2024-03-05 17:44:26.879 [DEBU] {7816e5f71fd5b917a4b3b522fe99628a} [ 35 ms] [default] [goframe] [rows:5  ] SHOW FULL COLUMNS FROM `role_permission_info`
+2024-03-05 17:44:26.902 [DEBU] {7816e5f71fd5b917a4b3b522fe99628a} [ 21 ms] [default] [goframe] [rows:1  ] INSERT INTO `role_permission_info`(`role_id`,`permission_id`,`created_at`,`updated_at`) VALUES(1,1,'2024-03-05 17:44:26','2024-03-05 17:44:26') 
+2024-03-05 17:45:32.873 [DEBU] {b4d49c542fd5b917eb9bd6706d2452ae} [ 49 ms] [default] [goframe] [rows:5  ] SHOW FULL COLUMNS FROM `role_permission_info`
+2024-03-05 17:45:32.902 [DEBU] {b4d49c542fd5b917eb9bd6706d2452ae} [ 29 ms] [default] [goframe] [rows:1  ] DELETE FROM `role_permission_info` WHERE (`role_id`=1) AND (`permission_id`=1)

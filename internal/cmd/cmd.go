@@ -30,7 +30,7 @@ var (
 			s := g.Server()
 			// 启动gtoken
 			gfAdminToken := &gtoken.GfToken{
-				CacheMode:        1,
+				CacheMode:        2,
 				ServerName:       "goframe",                                                 //服务名称
 				LoginPath:        "/backend/login",                                          //登录路径
 				LoginBeforeFunc:  loginFunc,                                                 //登录前的函数
@@ -60,6 +60,7 @@ var (
 					controller.Admin.Delete,  // 管理员
 					controller.Admin.GetList, // 管理员
 					controller.Login,         // 登录
+					controller.Role,          //角色管理
 				)
 				// Special handler that needs authentication.
 				group.Group("/", func(group *ghttp.RouterGroup) {
@@ -71,6 +72,10 @@ var (
 					group.ALLMap(g.Map{
 						"/backend/admin/info": controller.Admin.Info,
 					})
+					//
+					//group.Bind(
+					//	controller.Role,
+					//)
 				})
 			})
 			s.Run()
