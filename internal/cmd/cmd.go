@@ -61,6 +61,8 @@ var (
 					controller.Admin.GetList, // 管理员
 					controller.Login,         // 登录
 					controller.Role,          //角色管理
+					controller.Permission,    //权限管理
+
 				)
 				// Special handler that needs authentication.
 				group.Group("/", func(group *ghttp.RouterGroup) {

@@ -9,6 +9,7 @@ import (
 	_ "goframe/internal/logic/bizctx"
 	_ "goframe/internal/logic/login"
 	_ "goframe/internal/logic/middleware"
+	_ "goframe/internal/logic/permission"
 	_ "goframe/internal/logic/position"
 	_ "goframe/internal/logic/role"
 	_ "goframe/internal/logic/rotation"

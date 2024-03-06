@@ -33,3 +33,10 @@
 2024-03-05 17:44:26.902 [DEBU] {7816e5f71fd5b917a4b3b522fe99628a} [ 21 ms] [default] [goframe] [rows:1  ] INSERT INTO `role_permission_info`(`role_id`,`permission_id`,`created_at`,`updated_at`) VALUES(1,1,'2024-03-05 17:44:26','2024-03-05 17:44:26') 
 2024-03-05 17:45:32.873 [DEBU] {b4d49c542fd5b917eb9bd6706d2452ae} [ 49 ms] [default] [goframe] [rows:5  ] SHOW FULL COLUMNS FROM `role_permission_info`
 2024-03-05 17:45:32.902 [DEBU] {b4d49c542fd5b917eb9bd6706d2452ae} [ 29 ms] [default] [goframe] [rows:1  ] DELETE FROM `role_permission_info` WHERE (`role_id`=1) AND (`permission_id`=1)
+2024-03-05 22:48:01.016 [DEBU] {747dd2c4b0e5b917df60145737d674c3} [ 71 ms] [default] [goframe] [rows:23 ] SHOW TABLES
+2024-03-05 22:48:01.051 [DEBU] {747dd2c4b0e5b917df60145737d674c3} [  9 ms] [default] [goframe] [rows:6  ] SHOW FULL COLUMNS FROM `permission_info`
+2024-03-05 22:48:01.061 [DEBU] {747dd2c4b0e5b917df60145737d674c3} [  9 ms] [default] [goframe] [rows:4  ] SELECT `id`,`name`,`path`,`created_at`,`updated_at`,`deleted_at` FROM `permission_info` WHERE `deleted_at` IS NULL LIMIT 0,10
+2024-03-05 22:48:01.077 [DEBU] {747dd2c4b0e5b917df60145737d674c3} [ 15 ms] [default] [goframe] [rows:1  ] SELECT COUNT(1) FROM `permission_info` WHERE `deleted_at` IS NULL
+2024-03-05 22:48:01.088 [DEBU] {747dd2c4b0e5b917df60145737d674c3} [ 10 ms] [default] [goframe] [rows:4  ] SELECT `id`,`name`,`path`,`created_at`,`updated_at` FROM `permission_info` WHERE `deleted_at` IS NULL LIMIT 0,10
+2024-03-05 22:48:42.199 [DEBU] {9cda895bbae5b917e060145753848786} [ 72 ms] [default] [goframe] [rows:1  ] INSERT INTO `permission_info`(`name`,`path`,`created_at`,`updated_at`) VALUES('1','1','2024-03-05 22:48:42','2024-03-05 22:48:42') 
+2024-03-05 22:48:51.340 [DEBU] {8c29677ebce5b917e16014575da27b88} [ 39 ms] [default] [goframe] [rows:1  ] UPDATE `permission_info` SET `name`='12',`path`='1',`updated_at`='2024-03-05 22:48:51' WHERE (`id`=1) AND `deleted_at` IS NULL
