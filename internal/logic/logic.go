@@ -13,4 +13,5 @@ import (
 	_ "goframe/internal/logic/role"
 	_ "goframe/internal/logic/rotation"
 	_ "goframe/internal/logic/session"
+	_ "goframe/internal/logic/upload"
 )
