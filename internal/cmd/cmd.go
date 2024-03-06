@@ -11,6 +11,8 @@ import (
 	"goframe/utility/response"
 	"strconv"
 
+	"github.com/gogf/gf/v2/util/gmode"
+
 	"github.com/goflyfox/gtoken/gtoken"
 	"github.com/gogf/gf/v2/frame/g"
 	"github.com/gogf/gf/v2/net/ghttp"
@@ -28,6 +30,25 @@ var (
 		Brief: "start http server",
 		Func: func(ctx context.Context, parser *gcmd.Parser) (err error) {
 			s := g.Server()
+
+			// 静态目录设置
+			uploadPath := g.Cfg().MustGet(ctx, "upload.path").String()
+			//fmt.Println("uploadPath:", uploadPath)
+
+			//g.Dump("uploadPath:", uploadPath)
+			if uploadPath == "" {
+				g.Log().Fatal(ctx, "文件上传配置路径不能为空")
+				//panic("文件上传配置路径不能为空")
+			}
+			s.AddStaticPath("/upload", uploadPath)
+
+			// HOOK, 开发阶段禁止浏览器缓存,方便调试
+			if gmode.IsDevelop() {
+				s.BindHookHandler("/*", ghttp.HookBeforeServe, func(r *ghttp.Request) {
+					r.Response.Header().Set("Cache-Control", "no-store")
+				})
+			}
+
 			// 启动gtoken
 			gfAdminToken := &gtoken.GfToken{
 				CacheMode:        2,
@@ -62,7 +83,7 @@ var (
 					controller.Login,         // 登录
 					controller.Role,          //角色管理
 					controller.Permission,    //权限管理
-
+					controller.Upload,        //上传
 				)
 				// Special handler that needs authentication.
 				group.Group("/", func(group *ghttp.RouterGroup) {
